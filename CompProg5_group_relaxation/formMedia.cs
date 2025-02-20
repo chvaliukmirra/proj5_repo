@@ -109,6 +109,9 @@ namespace CompProg5_group_relaxation
 
         private Dictionary<string, string> GetAssetList(string folderPath)
         {
+
+
+
             var assetList = new Dictionary<string, string>();
             
 
