@@ -159,19 +159,7 @@ namespace CompProg5_group_relaxation
 
         }
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var mediaTypeList = isMusic ? musicList : videoList;
-            var selectedMedia = mediaTypeList[listBox2.SelectedItem.ToString()];
-
-            axWindowsMediaPlayer1.URL = selectedMedia;
-            if (isMusic)
-            {
-                selectedPhotoIndex = 0;
-                SelectPhoto();
-                StartStopTimer();
-            }
-        }
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -197,5 +185,21 @@ namespace CompProg5_group_relaxation
                 MessageBox.Show("No photos found in the folder");
             }
         }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var mediaTypeList = isMusic ? musicList : videoList;
+            var selectedMedia = mediaTypeList[listBox2.SelectedItem.ToString()];
+
+            axWindowsMediaPlayer1.URL = selectedMedia;
+            if (isMusic)
+            {
+                selectedPhotoIndex = 0;
+                SelectPhoto();
+                StartStopTimer();
+            }
+        }
+
+        
     }
 }
